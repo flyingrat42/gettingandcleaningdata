@@ -24,7 +24,7 @@ This "tidy" dataset was created by doing the following:
 
 ## Variables
 
-### Variable Explanations:
+### Variable Explanations
 
 Each entry in the tidy dataset is unique to the following two values:
   1. Subject: The identifier of the subject, a factor from 1-30.  Subjects were "volunteers within an age bracket of 19-48 years" [1].  
@@ -34,8 +34,8 @@ Each additional variable is the mean for that subject and activity of all observ
 
 The original variables had structured names, which are summarized below, and can be used to identify the original variable averaged to produce the tidy "mean-" result. 
 
-A suffix of -mean() indicates that the original variable was the mean measurement.
-A suffix of -std() indicates that the original variable was the standard deviation measurement.
+  A suffix of -mean() indicates that the original variable was the mean measurement.
+  A suffix of -std() indicates that the original variable was the standard deviation measurement.
 
 #### Time-domain signal variables
 

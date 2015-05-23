@@ -34,34 +34,55 @@ Each additional variable is the mean for that subject and activity of all observ
 
 The original variables had structured names, which are summarized below, and can be used to identify the original variable averaged to produce the tidy "mean-" result. 
 
-Time-domain signals (in seconds): 
-* tBodyAcc-X/Y/Z: Body acceleration as measured by the smartphone accelerometer, along the X/Y/Z axis.
-* tBodyGyro-X/Y/Z: Body acceleration as measured by the smartphone gyroscope, along the X/Y/Z axis.
-* tGravityAcc-X/Y/Z: Gravitational acceleration as measured by the smartphone accelerometer, along the X/Y/Z axis.
-* tGravityGyro-X/Y/Z: Gravitational acceleration as measured by the smartphone gyroscope, along the X/Y/Z axis.
-* tBodyAccJerk-X/Y/Z: 
-* tBodyGyroJerk-X/Y/Z: 
-* tBodyAccMag:
-* tGravityAccMag:
-* tBodyAccJerkMag:
-* tBodyGyroMag:
-* tBodyGyroJerkMag:
+A suffix of -mean() indicates that the original variable was the mean measurement.
+A suffix of -std() indicates that the original variable was the standard deviation measurement.
+
+Time-domain signal variables: 
+
+* tBodyAcc-XYZ: Body acceleration as estimated from the smartphone accelerometer, along the X/Y/Z axis.
+* tGravityAcc-XYZ: Gravitational acceleration as estimated from the smartphone accelerometer, along the X/Y/Z axis.
+* tBodyAccJerk-XYZ: Body "jerk" signal as calculated from the smartphone accelerometer, along the X/Y/Z axis.
+* tBodyGyro-XYZ: Body acceleration as estimated from the smartphone gyroscope, along the X/Y/Z axis.
+* tBodyGyroJerk-XYZ: Body "jerk" signal as calculated from the smartphone gyroscope, along the X/Y/Z axis.
+* tBodyAccMag: Magnitude of 3-dimensional body acceleration from accelerometer.
+* tGravityAccMag: Magnitude of 3-dimensional gravitational acceleration from accelerometer.
+* tBodyAccJerkMag: Magnitude of 3-dimensional body "jerk" acceleration from accelerometer.
+* tBodyGyroMag: Magnitude of 3-dimensional body acceleration from gyroscope.
+* tBodyGyroJerkMag: Magnitude of 3-dimensional body "jerk" acceleration from gyroscope.
+
+Frequency-domain signal variables:
+
+* fBodyAcc-XYZ: Frequency measurement of body acceleration along each axis, from the accelerometer.
+* fBodyAccJerk-XYZ: : Frequency measurement of body "jerk" acceleration along each axis, from the accelerometer.
+* fBodyGyro-XYZ: Frequency measurement of body acceleration along each axis, from the gyroscope.
+* fBodyAccMag: Frequency measurement of 3-dimensional body acceleration magnitude, from the accelerometer.
+* fBodyAccJerkMag: Frequency measurement of 3-dimensional body "jerk" acceleration magnitude, from the accelerometer.
+* fBodyGyroMag: Frequency measurement of 3-dimensional body acceleration magnitude, from the gyroscope.
+* fBodyGyroJerkMag: Frequency measurement of 3-dimensional body "jerk" acceleration magnitude, from the gyroscope.
+
+Additional angular measurements, with vectors obtained by averaging the signals in a signal window sample:
+
+* angle(XYZ,gravityMean): Angular measurement between the gravitational vector and the X/Y/Z axes.
+* angle(tBodyAccMean,gravity): Angular measurement between mean body acceleration from the accelerometer, and the gravitational vector.
+* angle(tBodyAccJerkMean),gravityMean): Angular measurement between mean body "jerk" acceleration from the accelerometer, and the gravitational vector.
+* angle(tBodyGyroMean,gravityMean): Angular measurement between mean body acceleration from the gyroscope, and the gravitational vector.
+* angle(tBodyGyroJerkMean,gravityMean): Angular measurement between mean body "jerk" acceleration from the gyroscope, and the gravitational vector.
 
 ### Full Variable List
 1. subject
-2. activity: Activity name: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. [1]
-3. mean-tBodyAcc-mean()-X: Mean of mean accelerometer measurements of body acceleration along the X-axis.
-4. mean-tBodyAcc-mean()-Y: Mean of mean body acceleration along the Y-axis.
-5. mean-tBodyAcc-mean()-Z: Mean of mean body acceleration along the Z-axis.
-6. mean-tBodyAcc-std()-X: Mean of the standard deviation of body acceleration along the X-axis.
-7. mean-tBodyAcc-std()-Y: Mean of the standard deviation of body acceleration along the Y-axis.
-8. mean-tBodyAcc-std()-Z: Mean of the standard deviation of body acceleration along the Z-axis.
-9. mean-tGravityAcc-mean()-X: Mean of mean gravitational acceleration along the X-axis.
-10. mean-tGravityAcc-mean()-Y: Mean of mean gravitational acceleration along the Y-axis.
-11. mean-tGravityAcc-mean()-Z: Mean of mean gravitational acceleration along the Z-axis.
-12. mean-tGravityAcc-std()-X: Mean of the standard deviation of gravitational acceleration along the X-axis.
-13. mean-tGravityAcc-std()-Y: Mean of the standard deviation of gravitational acceleration along the Y-axis.
-14. mean-tGravityAcc-std()-Z: Mean of the standard deviation of gravitational acceleration along the Z-axis.
+2. activity
+3. mean-tBodyAcc-mean()-X
+4. mean-tBodyAcc-mean()-Y
+5. mean-tBodyAcc-mean()-Z
+6. mean-tBodyAcc-std()-X
+7. mean-tBodyAcc-std()-Y
+8. mean-tBodyAcc-std()-Z
+9. mean-tGravityAcc-mean()-X
+10. mean-tGravityAcc-mean()-Y
+11. mean-tGravityAcc-mean()-Z
+12. mean-tGravityAcc-std()-X
+13. mean-tGravityAcc-std()-Y
+14. mean-tGravityAcc-std()-Z
 15. mean-tBodyAccJerk-mean()-X
 16. mean-tBodyAccJerk-mean()-Y
 17. mean-tBodyAccJerk-mean()-Z
@@ -135,6 +156,6 @@ Time-domain signals (in seconds):
 85. mean-angle(tBodyGyroJerkMean,gravityMean)
 86. mean-angle(X,gravityMean)
 87. mean-angle(Y,gravityMean)
-88. angle(Z,gravityMean)
+88. mean-angle(Z,gravityMean)
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012

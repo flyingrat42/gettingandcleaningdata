@@ -1,22 +1,21 @@
 # Course Project, Getting and Cleaning Data
-## Session: 
-## User: flyingrat42
+* Session: May 2015
+* User: flyingrat42
 
 # Purpose
-The attached run_analysis.R script processes the Samsung Galaxy accelerometer dataset available from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  It creates a tidy dataset by doing the following:
+The attached run_analysis.R script produces a tidy dataset from the publicly-available Human Activity Recognition Using Smartphones dataset, version 1.0.
 
-1. Combining the test and training datasets;
-2. Extracting variables on mean and standard deviation;
-3. Averaging each variable per user and activity;
-4. Adding descriptive data labels.
+The tidy dataset contains an average per subject and activity for each of 88 original mean or standard deviation variables in the original dataset.  
 
-For more details on the variables, see the "Code Book" below.
+For more info on the variables, see CodeBook.md.
 
 # Running the Script
 
-Example:
-tidyData <- run_analysis() 
+The script presumes that the original dataset (which unzips into the folder "UCI HAR Dataset") is in the working directory.
+
+To run:
+
+    tidyData <- run_analysis() 
 
 where tidyData is a "tidy" data frame as above.
 
-# Codebook

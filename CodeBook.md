@@ -27,8 +27,8 @@ This "tidy" dataset was created by doing the following:
 ### Variable Explanations:
 
 Each entry in the tidy dataset is unique to the following two values:
-1. Subject: The identifier of the subject, a factor from 1-30.  Subjects were "volunteers within an age bracket of 19-48 years" [1].  
-2. Activity: The activity recorded, a factor with the following values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. [1]
+  1. Subject: The identifier of the subject, a factor from 1-30.  Subjects were "volunteers within an age bracket of 19-48 years" [1].  
+  2. Activity: The activity recorded, a factor with the following values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING. [1]
 
 Each additional variable is the mean for that subject and activity of all observations in the original dataset.  Accordingly, all variables in the tidy dataset are prefixed with "mean-".  
 

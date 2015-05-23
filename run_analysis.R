@@ -1,18 +1,7 @@
 run_analysis <- function () {
   
-  # Some initial package/library wrangling.
-  #install.packages("data.table")
-  library(data.table)
   
-  # Store location of current/original working directory
-  origWD <- getwd()
-  
-  # Create working directory and switch to it  
-  workingDir <- "wearableData"
-  if (!file.exists(workingDir)) {dir.create(workingDir)}
-  setwd(workingDir)
-  
-  # Download raw dataset and unzip it
+   # Download raw dataset and unzip it
   #zipURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   #zipFileName <- "UCI_HAR_Dataset.zip"
   #download.file(zipURL,zipFileName,mode="wb")
@@ -86,16 +75,9 @@ run_analysis <- function () {
   
   # Changed the names on the tidy set to prepend "mean-" to the mean variables
   names(tidySet) <- c(names(tidySet)[1:2],paste("mean-",names(tidySet[-c(1,2)]),sep=""))
-
   
   # Some more cleanup
-  rm(allData,mergedData,meanAndStdData)
-  
-  # restore original working directory
-  setwd(origWD)
-  
-  # concat the results into a list and return them together
-  final <- list(resortedData,tidySet)
+  rm(allData,mergedData,meanAndStdData,resortedData)
 
-  final
+  tidySet
 }

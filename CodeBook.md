@@ -37,7 +37,7 @@ The original variables had structured names, which are summarized below, and can
 A suffix of -mean() indicates that the original variable was the mean measurement.
 A suffix of -std() indicates that the original variable was the standard deviation measurement.
 
-Time-domain signal variables: 
+#### Time-domain signal variables
 
 * tBodyAcc-XYZ: Body acceleration as estimated from the smartphone accelerometer, along the X/Y/Z axis.
 * tGravityAcc-XYZ: Gravitational acceleration as estimated from the smartphone accelerometer, along the X/Y/Z axis.
@@ -50,7 +50,7 @@ Time-domain signal variables:
 * tBodyGyroMag: Magnitude of 3-dimensional body acceleration from gyroscope.
 * tBodyGyroJerkMag: Magnitude of 3-dimensional body "jerk" acceleration from gyroscope.
 
-Frequency-domain signal variables:
+#### Frequency-domain signal variables
 
 * fBodyAcc-XYZ: Frequency measurement of body acceleration along each axis, from the accelerometer.
 * fBodyAccJerk-XYZ: : Frequency measurement of body "jerk" acceleration along each axis, from the accelerometer.
@@ -60,7 +60,7 @@ Frequency-domain signal variables:
 * fBodyGyroMag: Frequency measurement of 3-dimensional body acceleration magnitude, from the gyroscope.
 * fBodyGyroJerkMag: Frequency measurement of 3-dimensional body "jerk" acceleration magnitude, from the gyroscope.
 
-Additional angular measurements, with vectors obtained by averaging the signals in a signal window sample:
+#### Additional angular measurements, with vectors obtained by averaging the signals in a signal window sample
 
 * angle(XYZ,gravityMean): Angular measurement between the gravitational vector and the X/Y/Z axes.
 * angle(tBodyAccMean,gravity): Angular measurement between mean body acceleration from the accelerometer, and the gravitational vector.
